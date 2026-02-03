@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Качка Боб",
+  "version": "3.1.5",
+  "description": "Вставляет заранее заданные тексты в поле, по которому кликнули правой кнопкой | adWMG / by Ostin",
+  "permissions": ["contextMenus", "scripting", "activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Вставлятор текста"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}

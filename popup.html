@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Profiles</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif;
+      margin: 20px; 
+      color: #222;
+	  width: 200px;
+    }
+    label { 
+      font-size: 14px; 
+      font-weight: bold; 
+    }
+    select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      height: 48px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .note1 {
+      margin-top: 4px;
+      color: #777;
+      font-size: 12px;
+      text-align: center;
+    }
+    .note2 {
+      margin-block-end: 11px;
+      color: #777;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="note2">Пресети слів:</div>
+
+  <select id="profileSelect">
+    <option value="profile1">Основний текст</option>
+    <option value="profile2">Релевантні</option>
+    <option value="profile3">Всі 2</option>
+    <option value="profile4">🇪🇸.Испанский</option>
+	<option value="profile5">🇫🇷.Французский</option>
+	<option value="profile6">🇩🇪.Немецкий</option>
+	<option value="profile7">🇵🇹.Португальский</option>
+	<option value="profile8">🇵🇱.Польский</option>
+  </select>
+
+  <div class="note1">adWMG / by Ostin</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
