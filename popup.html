@@ -2,57 +2,124 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <title>Profiles</title>
+  <title>Switcher</title>
   <style>
     body { 
       font-family: Arial, sans-serif;
-      margin: 20px; 
-      color: #222;
-	  width: 200px;
+      margin: 0; 
+      padding: 10px;
+      color: #333;
+      width: 250px;
+      background-color: #f4f4f4;
     }
-    label { 
-      font-size: 14px; 
-      font-weight: bold; 
+    
+    h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #888;
+      margin: 10px 0 5px 2px;
+      letter-spacing: 0.5px;
     }
-    select {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 12px;
-      height: 48px;
-      font-size: 15px;
-      border-radius: 8px;
+    
+    .grid-modes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    
+    .grid-langs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .profile-btn {
+      background: white;
       border: 1px solid #ccc;
-    }
-    .note1 {
-      margin-top: 4px;
-      color: #777;
-      font-size: 12px;
+      border-radius: 6px;
+      padding: 8px;
+      cursor: pointer;
       text-align: center;
+      transition: all 0.1s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      user-select: none;
     }
-    .note2 {
-      margin-block-end: 11px;
-      color: #777;
-      font-size: 14px;
-      text-align: center;
+
+    .profile-btn:hover {
+      border-color: #999;
+      background: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .profile-btn.active {
+      border-color: #2196F3;
+      background: #E3F2FD;
+      color: #0d47a1;
+      font-weight: bold;
+      box-shadow: inset 0 0 0 1px #2196F3;
+    }
+
+    .icon {
+      font-size: 20px;
+      margin-bottom: 3px;
+    }
+    
+    .label {
+      font-size: 10px;
+      line-height: 1.1;
+    }
+
+    .full-width {
+      grid-column: span 2;
     }
   </style>
 </head>
 <body>
 
-  <div class="note2">Пресети слів:</div>
+  <h3>Режимы</h3>
+  <div class="grid-modes">
+    <div class="profile-btn" data-value="profile1">
+      <div class="icon">📄</div>
+      <div class="label">Основной</div>
+    </div>
+    <div class="profile-btn" data-value="profile2">
+      <div class="icon">🎯</div>
+      <div class="label">Релевант</div>
+    </div>
+    <div class="profile-btn full-width" data-value="profile3">
+      <div class="icon">📚</div>
+      <div class="label">Всі 2 (Mix)</div>
+    </div>
+  </div>
 
-  <select id="profileSelect">
-    <option value="profile1">Основний текст</option>
-    <option value="profile2">Релевантні</option>
-    <option value="profile3">Всі 2</option>
-    <option value="profile4">🇪🇸.Испанский</option>
-	<option value="profile5">🇫🇷.Французский</option>
-	<option value="profile6">🇩🇪.Немецкий</option>
-	<option value="profile7">🇵🇹.Португальский</option>
-	<option value="profile8">🇵🇱.Польский</option>
-  </select>
-
-  <div class="note1">adWMG / by Ostin</div>
+  <h3>Языки</h3>
+  <div class="grid-langs">
+    <div class="profile-btn" data-value="profile4">
+      <div class="icon">🇪🇸</div>
+      <div class="label">ES</div>
+    </div>
+    <div class="profile-btn" data-value="profile5">
+      <div class="icon">🇫🇷</div>
+      <div class="label">FR</div>
+    </div>
+    <div class="profile-btn" data-value="profile6">
+      <div class="icon">🇩🇪</div>
+      <div class="label">DE</div>
+    </div>
+    <div class="profile-btn" data-value="profile7">
+      <div class="icon">🇵🇹</div>
+      <div class="label">PT</div>
+    </div>
+    <div class="profile-btn" data-value="profile8">
+      <div class="icon">🇵🇱</div>
+      <div class="label">PL</div>
+    </div>
+  </div>
 
   <script src="popup.js"></script>
 </body>

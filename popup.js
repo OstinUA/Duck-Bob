@@ -1,16 +1,27 @@
-const select = document.getElementById("profileSelect");
+const buttons = document.querySelectorAll(".profile-btn");
 
-// Загружаем активный профиль при открытии popup
 chrome.storage.sync.get(["activeProfile"], (data) => {
-  if (data.activeProfile) {
-    select.value = data.activeProfile;
-  }
+  const currentProfile = data.activeProfile || "profile1";
+  
+  buttons.forEach(btn => {
+    if (btn.dataset.value === currentProfile) {
+      btn.classList.add("active");
+    }
+  });
 });
 
-// Сохраняем выбранный профиль
-select.addEventListener("change", () => {
-  chrome.storage.sync.set({ activeProfile: select.value });
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-  // сообщаем background.js что профиль изменился
-  chrome.runtime.sendMessage({ type: "profileChanged" });
+    const newValue = btn.dataset.value;
+
+    chrome.storage.sync.set({ activeProfile: newValue });
+    chrome.runtime.sendMessage({ type: "profileChanged" });
+
+    setTimeout(() => {
+       window.close();
+    }, 150);
+  });
 });
