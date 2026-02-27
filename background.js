@@ -1,38 +1,32 @@
-var profiles = {}; 
+var profiles = {};
 
 try {
   importScripts('profiles/en.js', 'profiles/fr.js');
 } catch (e) {
-  console.error("Error importing profiles:", e);
+  console.error(e);
 }
 
-let groups = profiles["profile1"] || {}; // Default
+function updateContextMenu() {
+  chrome.storage.sync.get(["activeProfile"], (data) => {
+    const profileId = data.activeProfile || "profile1";
+    const currentData = profiles[profileId] || profiles["profile1"];
 
-chrome.storage.sync.get(["activeProfile"], (data) => {
-  if (data.activeProfile && profiles[data.activeProfile]) {
-    groups = profiles[data.activeProfile];
-  }
-  buildMenu();
-});
+    if (!currentData) return;
 
-function buildMenu() {
-  chrome.contextMenus.removeAll(() => {
-    chrome.contextMenus.create({
-      id: "mainMenu",
-      title: "Вставлятор текста =>",
-      contexts: ["editable"]
-    });
+    chrome.contextMenus.removeAll(() => {
+      if (chrome.runtime.lastError) {}
 
-    if (!groups || Object.keys(groups).length === 0) return;
+      chrome.contextMenus.create({
+        id: "mainMenu",
+        title: "Вставлятор текста =>",
+        contexts: ["editable"]
+      });
 
-    chrome.storage.sync.get(["activeProfile"], (data) => {
-      const profileId = data.activeProfile || "profile1";
-
-      Object.keys(groups).forEach((title) => {
+      Object.keys(currentData).forEach((key) => {
         chrome.contextMenus.create({
-          id: `${profileId}_${title}`,
+          id: `${profileId}_${key}`,
           parentId: "mainMenu",
-          title: title,
+          title: key,
           contexts: ["editable"]
         });
       });
@@ -40,31 +34,26 @@ function buildMenu() {
   });
 }
 
-chrome.runtime.onInstalled.addListener(() => {
-  buildMenu();
-});
+chrome.runtime.onInstalled.addListener(updateContextMenu);
+chrome.runtime.onStartup.addListener(updateContextMenu);
 
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type === "profileChanged") {
-    chrome.storage.sync.get(["activeProfile"], (data) => {
-      const key = data.activeProfile;
-      if (profiles[key]) {
-        groups = profiles[key];
-        buildMenu();
-      }
-    });
+    updateContextMenu();
   }
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-
   const firstUnderscoreIndex = info.menuItemId.indexOf('_');
   if (firstUnderscoreIndex === -1) return;
-  
+
+  const profileId = info.menuItemId.substring(0, firstUnderscoreIndex);
   const categoryKey = info.menuItemId.substring(firstUnderscoreIndex + 1);
 
-  const words = groups[categoryKey];
-  
+  const selectedProfile = profiles[profileId];
+  if (!selectedProfile) return;
+
+  const words = selectedProfile[categoryKey];
   if (!words) return;
 
   chrome.scripting.executeScript({
@@ -83,7 +72,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
         el.value = word;
         el.dispatchEvent(inputEvent);
-
         el.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", keyCode: 13, bubbles: true }));
         el.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", keyCode: 13, bubbles: true }));
       };
