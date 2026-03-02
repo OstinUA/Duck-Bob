@@ -1,32 +1,28 @@
-// English Profiles
 var it_profiles = {
-  profile29: { // Main
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "UA", "User Acquisition"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Ad", "Brand", "Campaign", "Performance", "Growth"],
-    "Business x Partnerships": ["Business", "Strategic", "Partnerships", "Operations", "Sales", "Commerce", "Development", "Revenue"],
-    "Account x Client": ["Account", "Client", "Coordinator", "Relations", "Community"],
-    "Communications": ["Communications", "Social", "Media", "Content", "PR", "Copywriting", "Digital"],
-    "Leadership": ["CEO","CFO","CTO","Director", "Founder", "Head", "Lead", "Executive"]
+  profile29: {
+    "Programmatic": ["Programmatic", "AdOps", "Monetizzazione", "Publisher", "Domanda", "UA", "AdTech"],
+    "Marketing e Ads": ["Marketing", "Pubblicità", "Annunci", "Brand", "Campagna", "Performance", "Crescita"],
+    "Business e Partnership": ["Business", "Strategia", "Partnership", "Operazioni", "Vendite", "Sviluppo", "Ricavi"],
+    "Account e Clienti": ["Account", "Cliente", "Coordinatore", "Relazioni", "Community"],
+    "Comunicazione": ["Comunicazione", "Social Media", "Contenuto", "PR", "Copywriting", "Digital"],
+    "Leadership": ["CEO", "Direttore", "Fondatore", "Head", "Lead", "Executive"]
   },
-  
-  profile30: { // Relevant
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Brand"],
-    "Business": ["Business", "Strategic", "Partnerships", "Development"],
-    "Other": ["Head", "Director", "Lead", "Executive"]
+  profile30: {
+    "Programmatic": ["Programmatic", "AdOps", "Monetizzazione", "Publisher", "Domanda"],
+    "Marketing e Ads": ["Marketing", "Pubblicità", "Annunci", "Brand"],
+    "Business": ["Business", "Strategia", "Partnership", "Sviluppo"],
+    "Altro": ["Head", "Direttore", "Lead", "Executive"]
   },
-
-  profile31: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
+  profile31: {
+    "Lista Prospect 1": ["Programmatic", "AdOps", "Monetizzazione", "Publisher", "Domanda", "Marketing", "Pubblicità", "Annunci", "Brand"],
+    "Lista Prospect 2": ["Business", "Strategia", "Partnership", "Account", "Media", "Head", "Direttore", "Executive"]
+  },
+  profile32: {
+    "Lista Prospect 1": ["Programmatic", "AdOps", "Monetizzazione", "Publisher", "Domanda", "Marketing", "Pubblicità", "Annunci", "Brand"],
+    "Lista Prospect 2": ["Business", "Strategia", "Partnership", "Account", "Media", "Head", "Direttore", "Executive"]
   }
-  
-  profile32: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
-  }  
 };
 
 if (typeof profiles !== 'undefined') {
-    Object.assign(profiles, it_profiles);
+  Object.assign(profiles, it_profiles);
 }

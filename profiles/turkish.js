@@ -1,32 +1,28 @@
-// English Profiles
 var tr_profiles = {
-  profile33: { // Main
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "UA", "User Acquisition"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Ad", "Brand", "Campaign", "Performance", "Growth"],
-    "Business x Partnerships": ["Business", "Strategic", "Partnerships", "Operations", "Sales", "Commerce", "Development", "Revenue"],
-    "Account x Client": ["Account", "Client", "Coordinator", "Relations", "Community"],
-    "Communications": ["Communications", "Social", "Media", "Content", "PR", "Copywriting", "Digital"],
-    "Leadership": ["CEO","CFO","CTO","Director", "Founder", "Head", "Lead", "Executive"]
+  profile33: {
+    "Programatik": ["Programatik", "AdOps", "Monetizasyon", "Publisher", "Talep", "UA", "AdTech"],
+    "Pazarlama ve Reklam": ["Pazarlama", "Reklam", "İlan", "Marka", "Kampanya", "Performans", "Büyüme"],
+    "İş ve Ortaklıklar": ["İş", "Strateji", "Ortaklık", "Operasyon", "Satış", "Geliştirme", "Gelir"],
+    "Hesap ve Müşteri": ["Hesap", "Müşteri", "Koordinatör", "İlişkiler", "Community"],
+    "İletişim": ["İletişim", "Sosyal Medya", "İçerik", "PR", "Metin Yazarlığı", "Dijital"],
+    "Liderlik": ["CEO", "Direktör", "Kurucu", "Head", "Lead", "Executive"]
   },
-  
-  profile34: { // Relevant
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Brand"],
-    "Business": ["Business", "Strategic", "Partnerships", "Development"],
-    "Other": ["Head", "Director", "Lead", "Executive"]
+  profile34: {
+    "Programatik": ["Programatik", "AdOps", "Monetizasyon", "Publisher", "Talep"],
+    "Pazarlama ve Reklam": ["Pazarlama", "Reklam", "İlan", "Marka"],
+    "İş": ["İş", "Strateji", "Ortaklık", "Geliştirme"],
+    "Diğer": ["Head", "Direktör", "Lead", "Executive"]
   },
-
-  profile35: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
+  profile35: {
+    "Aday Listesi 1": ["Programatik", "AdOps", "Monetizasyon", "Publisher", "Talep", "Pazarlama", "Reklam", "İlan", "Marka"],
+    "Aday Listesi 2": ["İş", "Strateji", "Ortaklık", "Hesap", "Media", "Head", "Direktör", "Executive"]
+  },
+  profile36: {
+    "Aday Listesi 1": ["Programatik", "AdOps", "Monetizasyon", "Publisher", "Talep", "Pazarlama", "Reklam", "İlan", "Marka"],
+    "Aday Listesi 2": ["İş", "Strateji", "Ortaklık", "Hesap", "Media", "Head", "Direktör", "Executive"]
   }
-  
-  profile36: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
-  }  
 };
 
 if (typeof profiles !== 'undefined') {
-    Object.assign(profiles, tr_profiles);
+  Object.assign(profiles, tr_profiles);
 }

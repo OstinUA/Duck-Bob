@@ -1,32 +1,28 @@
-// English Profiles
 var cs_profiles = {
-  profile25: { // Main
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "UA", "User Acquisition"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Ad", "Brand", "Campaign", "Performance", "Growth"],
-    "Business x Partnerships": ["Business", "Strategic", "Partnerships", "Operations", "Sales", "Commerce", "Development", "Revenue"],
-    "Account x Client": ["Account", "Client", "Coordinator", "Relations", "Community"],
-    "Communications": ["Communications", "Social", "Media", "Content", "PR", "Copywriting", "Digital"],
-    "Leadership": ["CEO","CFO","CTO","Director", "Founder", "Head", "Lead", "Executive"]
+  profile25: {
+    "Programmatic": ["Programmatic", "AdOps", "Monetizace", "Publisher", "Poptávka", "UA", "AdTech"],
+    "Marketing a Reklama": ["Marketing", "Reklama", "Inzerce", "Značka", "Kampaň", "Výkon", "Růst"],
+    "Byznys a Partnerství": ["Byznys", "Strategie", "Partnerství", "Operace", "Prodej", "Rozvoj", "Příjem"],
+    "Účty a Klienti": ["Účet", "Klient", "Koordinátor", "Vztahy", "Community"],
+    "Komunikace": ["Komunikace", "Social Media", "Obsah", "PR", "Copywriting", "Digital"],
+    "Vedení": ["CEO", "Ředitel", "Zakladatel", "Head", "Lead", "Executive"]
   },
-  
-  profile26: { // Relevant
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Brand"],
-    "Business": ["Business", "Strategic", "Partnerships", "Development"],
-    "Other": ["Head", "Director", "Lead", "Executive"]
+  profile26: {
+    "Programmatic": ["Programmatic", "AdOps", "Monetizace", "Publisher", "Poptávka"],
+    "Marketing a Reklama": ["Marketing", "Reklama", "Inzerce", "Značka"],
+    "Byznys": ["Byznys", "Strategie", "Partnerství", "Rozvoj"],
+    "Ostatní": ["Head", "Ředitel", "Lead", "Executive"]
   },
-
-  profile27: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
+  profile27: {
+    "Seznam Prospektů 1": ["Programmatic", "AdOps", "Monetizace", "Publisher", "Poptávka", "Marketing", "Reklama", "Inzerce", "Značka"],
+    "Seznam Prospektů 2": ["Byznys", "Strategie", "Partnerství", "Účet", "Media", "Head", "Ředitel", "Executive"]
+  },
+  profile28: {
+    "Seznam Prospektů 1": ["Programmatic", "AdOps", "Monetizace", "Publisher", "Poptávka", "Marketing", "Reklama", "Inzerce", "Značka"],
+    "Seznam Prospektů 2": ["Byznys", "Strategie", "Partnerství", "Účet", "Media", "Head", "Ředitel", "Executive"]
   }
-  
-  profile28: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
-  }  
 };
 
 if (typeof profiles !== 'undefined') {
-    Object.assign(profiles, cs_profiles);
+  Object.assign(profiles, cs_profiles);
 }
