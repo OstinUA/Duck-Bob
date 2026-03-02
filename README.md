@@ -4,7 +4,7 @@ A productivity Chrome Extension designed for AdTech recruiters, UA managers, and
 
 ![Manifest](https://img.shields.io/badge/manifest-V3-blue)
 ![Category](https://img.shields.io/badge/category-Productivity-green)
-![Version](https://img.shields.io/badge/version-4.0.1-orange)
+![Version](https://img.shields.io/badge/version-4.1.0-orange)
 
 ## The Problem
 When searching for candidates or companies on platforms like LinkedIn Recruiter or Sales Navigator, you often need to type dozens of keywords (e.g., "Programmatic", "AdOps", "Monetization") and press "Enter" after each one to create tags. Doing this manually is slow and repetitive.
