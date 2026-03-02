@@ -48,11 +48,11 @@ h3 {
 }
 
 .btn.active {
-  border-color: #2196F3;
-  background: #E3F2FD;
-  color: #0d47a1;
+  border-color: #DC9D00;
+  background: #ffe699;
+  color: #DC9D00;
   font-weight: bold;
-  box-shadow: inset 0 0 0 1px #2196F3;
+  box-shadow: inset 0 0 0 1px #DC9D00;
 }
 
 .icon { font-size: 24px; margin-bottom: 4px; }
@@ -63,7 +63,7 @@ h3 {
 .back-btn {
   font-size: 10px;
   cursor: pointer;
-  color: #2196F3;
+  color: #DC9D00;
   text-decoration: underline;
   border: none;
   background: none;

@@ -1,7 +1,18 @@
 var profiles = {};
 
 try {
-  importScripts('profiles/en.js', 'profiles/fr.js');
+  importScripts(
+    'profiles/english.js', 
+    'profiles/spanish.js', 
+    'profiles/french.js', 
+    'profiles/german.js', 
+    'profiles/portuguese.js', 
+    'profiles/polish.js', 
+    'profiles/czech.js', 
+    'profiles/italian.js',
+    'profiles/turkish.js',
+    'profiles/japanese.js'
+  );
 } catch (e) {
   console.error(e);
 }
