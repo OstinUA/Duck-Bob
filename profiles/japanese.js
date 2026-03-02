@@ -1,32 +1,28 @@
-// English Profiles
 var ja_profiles = {
-  profile37: { // Main
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "UA", "User Acquisition"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Ad", "Brand", "Campaign", "Performance", "Growth"],
-    "Business x Partnerships": ["Business", "Strategic", "Partnerships", "Operations", "Sales", "Commerce", "Development", "Revenue"],
-    "Account x Client": ["Account", "Client", "Coordinator", "Relations", "Community"],
-    "Communications": ["Communications", "Social", "Media", "Content", "PR", "Copywriting", "Digital"],
-    "Leadership": ["CEO","CFO","CTO","Director", "Founder", "Head", "Lead", "Executive"]
+  profile37: {
+    "プログラマティック": ["プログラマティック", "AdOps", "収益化", "Publisher", "需要", "UA", "AdTech"],
+    "マーケティングと広告": ["マーケティング", "広告", "Ads", "ブランド", "キャンペーン", "パフォーマンス", "成長"],
+    "ビジネスと提携": ["ビジネス", "戦略", "提携", "オペレーション", "営業", "開発", "収益"],
+    "アカウントとクライアント": ["アカウント", "クライアント", "コーディネーター", "リレーション", "コミュニティ"],
+    "コミュニケーション": ["コミュニケーション", "SNS", "コンテンツ", "PR", "ライティング", "デジタル"],
+    "リーダーシップ": ["CEO", "ディレクター", "創業者", "Head", "Lead", "Executive"]
   },
-  
-  profile38: { // Relevant
-    "Programmatic": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand"],
-    "Marketing x Ads": ["Marketing", "Advertising", "Ads", "Brand"],
-    "Business": ["Business", "Strategic", "Partnerships", "Development"],
-    "Other": ["Head", "Director", "Lead", "Executive"]
+  profile38: {
+    "プログラマティック": ["プログラマティック", "AdOps", "収益化", "Publisher", "需要"],
+    "マーケティングと広告": ["マーケティング", "広告", "Ads", "ブランド"],
+    "ビジネス": ["ビジネス", "戦略", "提携", "開発"],
+    "その他": ["Head", "ディレクター", "Lead", "Executive"]
   },
-
-  profile39: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
+  profile39: {
+    "見込み客リスト 1": ["プログラマティック", "AdOps", "収益化", "Publisher", "需要", "マーケティング", "広告", "Ads", "ブランド"],
+    "見込み客リスト 2": ["ビジネス", "戦略", "提携", "アカウント", "Media", "Head", "ディレクター", "Executive"]
+  },
+  profile40: {
+    "見込み客リスト 1": ["プログラマティック", "AdOps", "収益化", "Publisher", "需要", "マーケティング", "広告", "Ads", "ブランド"],
+    "見込み客リスト 2": ["ビジネス", "戦略", "提携", "アカウント", "Media", "Head", "ディレクター", "Executive"]
   }
-  
-  profile40: { // Mix
-    "Prospects List1": ["Programmatic", "Adops", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
-  }  
 };
 
 if (typeof profiles !== 'undefined') {
-    Object.assign(profiles, ja_profiles);
+  Object.assign(profiles, ja_profiles);
 }
