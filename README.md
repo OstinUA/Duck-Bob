@@ -2,6 +2,9 @@
 
 A productivity Chrome Extension designed for AdTech recruiters, UA managers, and Sales professionals. It automates the process of inserting batches of industry-specific keywords into search bars, filters, or CRM input fields.
 
+[![Chrome Store](https://img.shields.io/badge/platform-Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/search/OstinUA)
+[![Chrome Portfolio](https://img.shields.io/badge/Chrome_Web_Store-Portfolio-34A853?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ostinua.github.io/Chrome-Web-Store_Developer-List/)
+
 ![Manifest](https://img.shields.io/badge/manifest-V3-blue)
 ![Category](https://img.shields.io/badge/category-Productivity-green)
 ![Version](https://img.shields.io/badge/version-4.1.0-orange)
