@@ -39,7 +39,7 @@ async function refreshContextMenus() {
 
   await createContextMenuItem({
     id: MENU_IDS.ROOT,
-    title: 'Вставлятор текста =>',
+    title: 'Text Inserter =>',
     contexts: ['editable']
   });
 
