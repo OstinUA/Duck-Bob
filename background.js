@@ -1,97 +1,43 @@
-var profiles = {};
+importScripts(
+  'background/config.js',
+  'background/profile-loader.js',
+  'background/context-menu.js',
+  'background/injector.js'
+);
 
-try {
-  importScripts(
-    'profiles/english.js', 
-    'profiles/spanish.js', 
-    'profiles/french.js', 
-    'profiles/german.js', 
-    'profiles/portuguese.js', 
-    'profiles/polish.js', 
-    'profiles/czech.js', 
-    'profiles/italian.js',
-    'profiles/turkish.js',
-    'profiles/japanese.js'
-  );
-} catch (e) {
-  console.error(e);
+async function initializeExtension() {
+  await refreshContextMenus();
 }
 
-function updateContextMenu() {
-  chrome.storage.sync.get(["activeProfile"], (data) => {
-    const profileId = data.activeProfile || "profile1";
-    const currentData = profiles[profileId] || profiles["profile1"];
+chrome.runtime.onInstalled.addListener(() => {
+  initializeExtension();
+});
 
-    if (!currentData) return;
+chrome.runtime.onStartup.addListener(() => {
+  initializeExtension();
+});
 
-    chrome.contextMenus.removeAll(() => {
-      if (chrome.runtime.lastError) {}
-
-      chrome.contextMenus.create({
-        id: "mainMenu",
-        title: "Вставлятор текста =>",
-        contexts: ["editable"]
-      });
-
-      Object.keys(currentData).forEach((key) => {
-        chrome.contextMenus.create({
-          id: `${profileId}_${key}`,
-          parentId: "mainMenu",
-          title: key,
-          contexts: ["editable"]
-        });
-      });
-    });
-  });
-}
-
-chrome.runtime.onInstalled.addListener(updateContextMenu);
-chrome.runtime.onStartup.addListener(updateContextMenu);
-
-chrome.runtime.onMessage.addListener((msg) => {
-  if (msg.type === "profileChanged") {
-    updateContextMenu();
+chrome.runtime.onMessage.addListener((message) => {
+  if (message && message.type === MESSAGE_TYPES.PROFILE_CHANGED) {
+    refreshContextMenus();
   }
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  const firstUnderscoreIndex = info.menuItemId.indexOf('_');
-  if (firstUnderscoreIndex === -1) return;
+  const action = resolveMenuAction(info.menuItemId);
+  if (!action || !tab || !Number.isInteger(tab.id)) {
+    return;
+  }
 
-  const profileId = info.menuItemId.substring(0, firstUnderscoreIndex);
-  const categoryKey = info.menuItemId.substring(firstUnderscoreIndex + 1);
+  const selectedProfile = getProfileById(action.profileId);
+  if (!selectedProfile) {
+    return;
+  }
 
-  const selectedProfile = profiles[profileId];
-  if (!selectedProfile) return;
+  const words = selectedProfile[action.categoryKey];
+  if (!Array.isArray(words) || words.length === 0) {
+    return;
+  }
 
-  const words = selectedProfile[categoryKey];
-  if (!words) return;
-
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    func: async (list) => {
-      const el = document.activeElement;
-      if (!el) return;
-
-      const simulateInput = (word) => {
-        const inputEvent = new InputEvent("input", {
-          data: word,
-          inputType: "insertText",
-          bubbles: true,
-          cancelable: true
-        });
-
-        el.value = word;
-        el.dispatchEvent(inputEvent);
-        el.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", keyCode: 13, bubbles: true }));
-        el.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter", keyCode: 13, bubbles: true }));
-      };
-
-      for (const word of list) {
-        simulateInput(word);
-        await new Promise((r) => setTimeout(r, 39));
-      }
-    },
-    args: [words]
-  });
+  runInsertWordsScript(tab.id, words);
 });

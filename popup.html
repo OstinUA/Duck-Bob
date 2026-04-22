@@ -6,63 +6,33 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-
   <div id="step-lang">
     <h3>Выберите язык</h3>
     <div class="grid">
-      <div class="btn lang-select" data-lang="en">
-        <div class="icon">🇬🇧</div>
-        <div class="label">English</div>
-      </div>
-      <div class="btn lang-select" data-lang="es">
-        <div class="icon">🇪🇸</div>
-        <div class="label">Español</div>
-      </div>
-      <div class="btn lang-select" data-lang="fr">
-        <div class="icon">🇫🇷</div>
-        <div class="label">Français</div>
-      </div>
-      <div class="btn lang-select" data-lang="de">
-        <div class="icon">🇩🇪</div>
-        <div class="label">Deutsch</div>
-      </div>
-      <div class="btn lang-select" data-lang="pt">
-        <div class="icon">🇵🇹</div>
-        <div class="label">Português</div>
-      </div>
-      <div class="btn lang-select" data-lang="pl">
-        <div class="icon">🇵🇱</div>
-        <div class="label">Polski</div>
-      </div>
-      <div class="btn lang-select" data-lang="cs">
-        <div class="icon">🇨🇿</div>
-        <div class="label">Čeština</div>
-      </div>
-      <div class="btn lang-select" data-lang="it">
-        <div class="icon">🇮🇹</div>
-        <div class="label">Italiano</div>
-      </div>
-      <div class="btn lang-select" data-lang="tr">
-        <div class="icon">🇹🇷</div>
-        <div class="label">Türkçe</div>
-      </div>
-      <div class="btn lang-select" data-lang="ja">
-        <div class="icon">🇯🇵</div>
-        <div class="label">日本語</div>
-      </div>
-	  
-	  
+      <button type="button" class="btn lang-select" data-lang="en"><div class="icon">🇬🇧</div><div class="label">English</div></button>
+      <button type="button" class="btn lang-select" data-lang="es"><div class="icon">🇪🇸</div><div class="label">Español</div></button>
+      <button type="button" class="btn lang-select" data-lang="fr"><div class="icon">🇫🇷</div><div class="label">Français</div></button>
+      <button type="button" class="btn lang-select" data-lang="de"><div class="icon">🇩🇪</div><div class="label">Deutsch</div></button>
+      <button type="button" class="btn lang-select" data-lang="pt"><div class="icon">🇵🇹</div><div class="label">Português</div></button>
+      <button type="button" class="btn lang-select" data-lang="pl"><div class="icon">🇵🇱</div><div class="label">Polski</div></button>
+      <button type="button" class="btn lang-select" data-lang="cs"><div class="icon">🇨🇿</div><div class="label">Čeština</div></button>
+      <button type="button" class="btn lang-select" data-lang="it"><div class="icon">🇮🇹</div><div class="label">Italiano</div></button>
+      <button type="button" class="btn lang-select" data-lang="tr"><div class="icon">🇹🇷</div><div class="label">Türkçe</div></button>
+      <button type="button" class="btn lang-select" data-lang="ja"><div class="icon">🇯🇵</div><div class="label">日本語</div></button>
     </div>
   </div>
 
   <div id="step-profile" class="hidden">
     <h3>
       Профиль
-      <button id="back-btn" class="back-btn">← Назад</button>
+      <button id="back-btn" class="back-btn" type="button">← Назад</button>
     </h3>
     <div class="grid" id="profile-container"></div>
   </div>
 
+  <script src="popup/constants.js"></script>
+  <script src="popup/storage.js"></script>
+  <script src="popup/ui.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>
