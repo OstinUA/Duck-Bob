@@ -1,6 +1,6 @@
-body { 
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0; 
+  margin: 0;
   padding: 12px;
   color: #333;
   width: 250px;
@@ -25,6 +25,7 @@ h3 {
 }
 
 .btn {
+  font: inherit;
   background: white;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -44,26 +45,35 @@ h3 {
   border-color: #999;
   background: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn.active {
-  border-color: #DC9D00;
+  border-color: #dc9d00;
   background: #ffe699;
-  color: #DC9D00;
+  color: #dc9d00;
   font-weight: bold;
-  box-shadow: inset 0 0 0 1px #DC9D00;
+  box-shadow: inset 0 0 0 1px #dc9d00;
 }
 
-.icon { font-size: 24px; margin-bottom: 4px; }
-.label { font-size: 11px; line-height: 1.1; }
+.icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
 
-.hidden { display: none; }
+.label {
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.hidden {
+  display: none;
+}
 
 .back-btn {
   font-size: 10px;
   cursor: pointer;
-  color: #DC9D00;
+  color: #dc9d00;
   text-decoration: underline;
   border: none;
   background: none;
