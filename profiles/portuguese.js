@@ -14,12 +14,14 @@ var pt_profiles = {
     "Outros": ["Head", "Diretor", "Lead", "Executivo"]
   },
   profile19: {
-    "Lista de Prospects 1": ["Programático", "AdOps", "Monetização", "Publisher", "Demanda", "Marketing", "Publicidade", "Anúncios", "Marca"],
-    "Lista de Prospects 2": ["Negócios", "Estratégia", "Parcerias", "Conta", "Media", "Head", "Diretor", "Executivo"]
+    "Dados, Tech e Yield": ["Data Analyst", "Analista de Dados", "BI", "Business Intelligence", "SQL", "BigQuery", "Atribuição", "Mensuração"],
+    "Monetização e Revenue Ops": ["Yield", "Yield Management", "Monetização", "Revenue Operations", "Pricing", "Inventário", "Forecasting", "Receita de mídia"],
+    "Infraestrutura AdTech": ["AdTech", "Ad Server", "SSP", "DSP", "CDP", "Tracking", "Privacidade", "Consentimento", "Integração"]
   },
   profile20: {
-    "Lista de Prospects 1": ["Programático", "AdOps", "Monetização", "Publisher", "Demanda", "Marketing", "Publicidade", "Anúncios", "Marca"],
-    "Lista de Prospects 2": ["Negócios", "Estratégia", "Parcerias", "Conta", "Media", "Head", "Diretor", "Executivo"]
+    "Mídia, Estratégia e Criativo": ["Media Planner", "Media Buyer", "Digital Strategist", "Campaign Manager", "Paid Media", "Planejamento de mídia", "Performance Media", "Omnichannel"],
+    "Estratégia e Contas": ["Account Strategist", "Diretor de Contas", "Estratégia digital", "Estratégia de cliente", "Audience Planning", "Brand Strategy", "Briefing", "Pitch"],
+    "Criativo e Ativação": ["Creative Strategist", "Produtor Criativo", "Criativos", "Copywriter", "Content Strategy", "Creative Ops", "Execução de campanha", "Ativação"]
   }
 };
 

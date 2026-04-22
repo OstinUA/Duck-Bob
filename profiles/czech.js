@@ -14,12 +14,14 @@ var cs_profiles = {
     "Ostatní": ["Head", "Ředitel", "Lead", "Executive"]
   },
   profile27: {
-    "Seznam Prospektů 1": ["Programmatic", "AdOps", "Monetizace", "Publisher", "Poptávka", "Marketing", "Reklama", "Inzerce", "Značka"],
-    "Seznam Prospektů 2": ["Byznys", "Strategie", "Partnerství", "Účet", "Media", "Head", "Ředitel", "Executive"]
+    "Data, Tech a Yield": ["Data Analyst", "Datový analytik", "BI", "Business Intelligence", "SQL", "BigQuery", "Atribuce", "Měření"],
+    "Monetizace a Revenue Ops": ["Yield", "Yield Management", "Monetizace", "Revenue Operations", "Pricing", "Inventář", "Forecasting", "Příjmy z reklamy"],
+    "AdTech infrastruktura": ["AdTech", "Ad Server", "SSP", "DSP", "CDP", "Tracking", "Soukromí", "Consent", "Integrace"]
   },
   profile28: {
-    "Seznam Prospektů 1": ["Programmatic", "AdOps", "Monetizace", "Publisher", "Poptávka", "Marketing", "Reklama", "Inzerce", "Značka"],
-    "Seznam Prospektů 2": ["Byznys", "Strategie", "Partnerství", "Účet", "Media", "Head", "Ředitel", "Executive"]
+    "Média, strategie a kreativita": ["Media Planner", "Media Buyer", "Digital Strategist", "Campaign Manager", "Paid Media", "Mediální plánování", "Performance Media", "Omnichannel"],
+    "Strategie a účty": ["Account Strategist", "Account Director", "Digitální strategie", "Klientská strategie", "Audience Planning", "Brand Strategy", "Briefing", "Pitch"],
+    "Kreativa a aktivace": ["Creative Strategist", "Creative Producer", "Ad Creative", "Copywriter", "Content Strategy", "Creative Ops", "Realizace kampaní", "Aktivace"]
   }
 };
 
