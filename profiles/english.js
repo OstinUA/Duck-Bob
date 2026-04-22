@@ -14,12 +14,14 @@ var en_profiles = {
     "Other": ["Head", "Director", "Lead", "Executive"]
   },
   profile3: {
-    "Prospects List 1": ["Programmatic", "AdOps", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List 2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
+    "Data, Tech & Yield": ["Data Analyst", "Marketing Analyst", "BI", "Business Intelligence", "SQL", "BigQuery", "Attribution", "Measurement"],
+    "Monetization & Revenue Ops": ["Yield", "Yield Management", "Monetization Manager", "Revenue Operations", "Pricing", "Inventory", "Forecasting", "Ad Revenue"],
+    "AdTech Infrastructure": ["AdTech", "Ad Server", "SSP", "DSP", "CDP", "Tracking", "Privacy", "Consent", "Integration"]
   },
   profile4: {
-    "Prospects List 1": ["Programmatic", "AdOps", "Monetization", "Publisher", "Demand", "Marketing", "Advertising", "Ads", "Brand"],
-    "Prospects List 2": ["Business", "Strategic", "Partnerships", "Account", "Media", "Head", "Director", "Executive"]
+    "Media, Strategy & Creative": ["Media Planner", "Media Buyer", "Digital Strategist", "Campaign Manager", "Paid Media", "Channel Strategy", "Omnichannel", "Performance Media"],
+    "Planning & Account Strategy": ["Account Strategist", "Account Director", "Client Strategy", "Audience Planning", "Go-To-Market", "Brand Strategy", "Briefing", "Pitch"],
+    "Creative & Activation": ["Creative Strategist", "Creative Producer", "Ad Creative", "Copywriter", "Content Strategy", "Creative Ops", "Campaign Execution", "Activation"]
   }
 };
 

@@ -14,14 +14,14 @@ var fr_profiles = {
     "Autres": ["Head", "Directeur", "Lead", "Executive"]
   },
   profile11: { // Mix 1
-    "Tech Programmatic": ["Programmatic", "AdOps", "Monétisation", "Publisher", "Demand", "AdTech"],
-    "Acquisition & Performance": ["UA", "User Acquisition", "Performance", "Growth", "Campagne"],
-    "Activation Media": ["Ads", "Ad", "Media", "Digital", "Marketing"]
+    "Data, Tech & Yield": ["Data Analyst", "Analyste Data", "BI", "Business Intelligence", "SQL", "BigQuery", "Attribution", "Mesure"],
+    "Monétisation & Revenue Ops": ["Yield", "Yield Management", "Monétisation", "Revenue Operations", "Pricing", "Inventaire", "Forecasting", "Revenu publicitaire"],
+    "Infrastructure AdTech": ["AdTech", "Ad Server", "SSP", "DSP", "CDP", "Tracking", "Privacy", "Consentement", "Intégration"]
   },
   profile12: { // Mix 2
-    "Business Development AdTech": ["Business", "Développement", "Revenue", "Commerce", "Sales"],
-    "Partenariats Stratégiques": ["Stratégique", "Partenariats", "Relations", "Client", "Account"],
-    "Leadership Exécutif": ["CEO", "Fondateur", "Directeur", "Head", "Lead", "Executive"]
+    "Media, Stratégie & Création": ["Media Planner", "Media Buyer", "Digital Strategist", "Campaign Manager", "Paid Media", "Plan média", "Performance Media", "Omnicanal"],
+    "Stratégie Média & Compte": ["Account Strategist", "Directeur de clientèle", "Stratégie digitale", "Stratégie client", "Audience Planning", "Brand Strategy", "Brief", "Pitch"],
+    "Créatif & Activation": ["Creative Strategist", "Producer Créatif", "Création publicitaire", "Copywriter", "Content Strategy", "Creative Ops", "Activation", "Exécution de campagne"]
   }
 };
 

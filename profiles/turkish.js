@@ -14,12 +14,14 @@ var tr_profiles = {
     "Diğer": ["Head", "Direktör", "Lead", "Executive"]
   },
   profile35: {
-    "Aday Listesi 1": ["Programatik", "AdOps", "Monetizasyon", "Publisher", "Talep", "Pazarlama", "Reklam", "İlan", "Marka"],
-    "Aday Listesi 2": ["İş", "Strateji", "Ortaklık", "Hesap", "Media", "Head", "Direktör", "Executive"]
+    "Veri, Tech ve Yield": ["Data Analyst", "Veri Analisti", "BI", "Business Intelligence", "SQL", "BigQuery", "Attribution", "Ölçümleme"],
+    "Monetizasyon ve Revenue Ops": ["Yield", "Yield Management", "Monetizasyon", "Revenue Operations", "Pricing", "Envanter", "Forecasting", "Reklam geliri"],
+    "AdTech Altyapısı": ["AdTech", "Ad Server", "SSP", "DSP", "CDP", "Tracking", "Privacy", "Consent", "Entegrasyon"]
   },
   profile36: {
-    "Aday Listesi 1": ["Programatik", "AdOps", "Monetizasyon", "Publisher", "Talep", "Pazarlama", "Reklam", "İlan", "Marka"],
-    "Aday Listesi 2": ["İş", "Strateji", "Ortaklık", "Hesap", "Media", "Head", "Direktör", "Executive"]
+    "Medya, Strateji ve Kreatif": ["Media Planner", "Media Buyer", "Digital Strategist", "Campaign Manager", "Paid Media", "Medya planlama", "Performance Media", "Omnichannel"],
+    "Strateji ve Account": ["Account Strategist", "Account Director", "Dijital strateji", "Müşteri stratejisi", "Audience Planning", "Brand Strategy", "Briefing", "Pitch"],
+    "Kreatif ve Aktivasyon": ["Creative Strategist", "Creative Producer", "Ad Creative", "Copywriter", "Content Strategy", "Creative Ops", "Kampanya yürütme", "Aktivasyon"]
   }
 };
 
