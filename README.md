@@ -29,7 +29,7 @@ When searching for candidates or companies on platforms like LinkedIn Recruiter 
     * 🇵🇹 Portuguese
     * 🇵🇱 Polish
 * **Smart Input Simulation:** Uses `InputEvent` and `KeyboardEvent` (Enter key) to ensure compatibility with complex React/Angular forms that require physical keystrokes to register data.
-* **Context Menu Integration:** Accessible via Right-Click -> "Вставлятор текста".
+* **Context Menu Integration:** Accessible via Right-Click -> "Text Inserter".
 
 ## Profiles Included
 
@@ -55,7 +55,7 @@ You can switch the active profile by clicking the extension icon in the toolbar.
 3.  Go to your target website (e.g., LinkedIn).
 4.  Click inside the search/filter input field.
 5.  **Right-click** the input field.
-6.  Hover over **"Вставлятор текста =>"** and select the specific category (e.g., "Programmatic" or "Marketing x Ads").
+6.  Hover over **"Text Inserter =>"** and select the specific category (e.g., "Programmatic" or "Marketing x Ads").
 7.  Watch as the extension automatically types and adds the tags for you.
 
 ## Technical Details
